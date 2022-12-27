@@ -1,0 +1,33 @@
+Sumo-gui
+	The Sumo-gui is how you watch the simulations. You can change the appearance of the simulation with the dropdown box that defaults to "standard." We suggest using real world.
+	If you want to watch what's happening in the simulation you'll need to change the delay to about 100ms. Then click play or step to see the simulation run.
+	If you know specific steps you'd like to get to you can set breakpoints by going to Edit > Edit Breakpoints.
+	If you want to watch the simulation again after it ends, use reload which is next to the play button.
+
+Netedit tools
+	Network Tab
+		Inspect mode: See details about each of the elements. Use shift to see details about individual lanes when hovering over an edge.
+		Delete mode: Self explanitory
+		Select mode: Use this to select multiple elements. Click on the element again to deselect it
+		Move mode: Never used it
+		Create edge mode: Used to create the edges in the network. Click two locations to create a road. Note that it only creates roads in one direction, you'll need to click to oppposite way to get a two-way road.
+		Set connection mode: Connection mode allows you to edit which lanes go to which lanes through an intersection. Click on a lane and you can choose which opposing/adjacent lanes it connects to. Dark green means possible connection, light green means it's already connected, yellow means there is a conflict from one of the other lanes. Once you are done. Make sure you hit ok on the left.
+		Set prohibition mode: Never used it
+		Set traffic light mode: The phases start with how long the phase will last (in seconds). Then a string that represents each phase of the light. G = Green high priority, g = Green low priority (left turn lanes for example), y = yellow, r = red. Each letter represents one lane in the junction. Each edge is usually grouped together next to each other, but other than that you'll need to mess with it to figure out which letter is associated with which lane. You can also save traffic light patterns for future use at the bottom of the menu.
+	Demand Tab
+		The first four tools are the same as the network tab.
+		Create route mode: Create a route from one edge to another edge for a vehicle to follow. Click on one edge then another and another until you create the route.
+		Create vehicle mode: Creates trips (Single vehicle trip), vehicles over routes (Put a vehicle on a route created from the previous tool), and flows (Multiple vehicles over time). 
+		Create type mode: You can make custom vehicle types and modify the behaviors of the default types as well. We used this to create the behavior for the EMS vehicle like it's speed, shape, and type.
+		We did not use any of the other modes.
+	Data Tab
+		We chose not to use the built-in netedit SUMO data collection tab. We chose to use Traci instead to collect our data.
+
+File Structure
+	*.net.xml: These are the network files which hold the information about the underlying network.
+	*.sumocfg: Sumocfg files are the simulations configuration files. It includes important information that brings everything together. It has a couple parameters that we used often.
+		<input> tells what files that are needed for the simulation which can include networks, routes, and other files.
+		<time> is used to set how long you want the simulation to run for
+		<processing> has some more niche information. Check out the SUMO documentation for more details.
+	*.rou.xml: This file is what generates the vehicles that traverse the network. It will also contain information about custom vehicle types if they are needed. We mainly used flows and trips. Flows created traffic that the EMS vehicle had to navigate around. We used a trip for each EMS vehicle, which usually just traveled from one end of the simulation to the other.
+	*.add.xml: Additional files include all other information about the simulation. We used it to create edgeData nodes which collect the data from the simulation and can create graphs. More information about this can be found in the SUMO documentation. The other additional we added were detectors. We detected the EMS vehicles and used Traci to mess with the traffic lights to help the EMS vehicle get to its destination faster.

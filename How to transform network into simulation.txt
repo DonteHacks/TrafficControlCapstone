@@ -1,0 +1,22 @@
+Create network using netedit
+Use randomtrips.py to generate a series of trips
+	-n "network_name.net.xml"
+	-e "end_time_in_secs"	(default is 3600s)
+	-o "output_name.trips.xml"
+Use duarouter to generate routes
+	-n "network_name.net.xml"
+	--route-files "trips_name.trips.xml"
+	-o "output_name.rou.xml"
+	--no-warnings
+	--ignore-errors
+Use one of the generated files as a template for the sim file (sim_name.sumo.cfg)
+	Change configuration to:
+		<input>
+			<net-file value="network_name.net.xml"/>
+			<route-files value="routes_name.rou.xml"/>
+		</input>
+
+		<time>
+			<begin value="0"/>
+			<end value="end value from above"/>
+		</time>
