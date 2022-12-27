@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<additional>
+
+	<edgeData id="EMSData" file=".\data\edgeData" vTypes="EMS_VEHICLE" excludeEmpty="true"/>
+	<edgeData id="OtherData" file=".\data\edgeData" vTypes="DEFAULT_VEHTYPE" excludeEmpty="true"/>
+	<edgeData id="AllData" file =".\data\edgeData" vTypes="DEFAULT_VEHTYPE EMS_VEHICLE" excludeEmpty="true"/>
+
+	<entryExitDetector id="det1_FAR" file=".\data\detectorData" vTypes="EMS_VEHICLE">
+		<detEntry lane="E1_0" pos="10"/>
+		<detEntry lane="E1_1" pos="10"/>
+		<detExit lane="E1_0" pos="15"/>
+		<detExit lane="E1_1" pos="15"/>
+	</entryExitDetector>
+	<entryExitDetector id="det2_FAR" file=".\data\detectorData" vTypes="EMS_VEHICLE">
+		<detEntry lane="E2_0" pos="10"/>
+		<detEntry lane="E2_1" pos="10"/>
+		<detExit lane="E2_0" pos="15"/>
+		<detExit lane="E2_1" pos="15"/>
+	</entryExitDetector>
+	<entryExitDetector id="det3_FAR" file=".\data\detectorData" vTypes="EMS_VEHICLE">
+		<detEntry lane="E3_0" pos="10"/>
+		<detEntry lane="E3_1" pos="10"/>
+		<detExit lane="E3_0" pos="15"/>
+		<detExit lane="E3_1" pos="15"/>
+	</entryExitDetector>
+	<entryExitDetector id="det4_FAR" file=".\data\detectorData" vTypes="EMS_VEHICLE">
+		<detEntry lane="E4_0" pos="10"/>
+		<detEntry lane="E4_1" pos="10"/>
+		<detExit lane="E4_0" pos="15"/>
+		<detExit lane="E4_1" pos="15"/>
+	</entryExitDetector>
+
+	<entryExitDetector id="det1_NEAR" file=".\data\detectorData" vTypes="EMS_VEHICLE">
+		<detEntry lane="E1_0" pos="70"/>
+		<detEntry lane="E1_1" pos="70"/>
+		<detExit lane="E1_0" pos="75"/>
+		<detExit lane="E1_1" pos="75"/>
+	</entryExitDetector>
+	<entryExitDetector id="det2_NEAR" file=".\data\detectorData" vTypes="EMS_VEHICLE">
+		<detEntry lane="E2_0" pos="60"/>
+		<detEntry lane="E2_1" pos="60"/>
+		<detExit lane="E2_0" pos="65"/>
+		<detExit lane="E2_1" pos="65"/>
+	</entryExitDetector>
+	<entryExitDetector id="det3_NEAR" file=".\data\detectorData" vTypes="EMS_VEHICLE">
+		<detEntry lane="E3_0" pos="60"/>
+		<detEntry lane="E3_1" pos="60"/>
+		<detExit lane="E3_0" pos="65"/>
+		<detExit lane="E3_1" pos="65"/>
+	</entryExitDetector>
+	<entryExitDetector id="det4_NEAR" file=".\data\detectorData" vTypes="EMS_VEHICLE">
+		<detEntry lane="E4_0" pos="70"/>
+		<detEntry lane="E4_1" pos="70"/>
+		<detExit lane="E4_0" pos="75"/>
+		<detExit lane="E4_1" pos="75"/>
+	</entryExitDetector>
+
+</additional>

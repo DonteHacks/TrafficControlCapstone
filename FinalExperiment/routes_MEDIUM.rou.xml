@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2022-12-04 19:37:39 by Eclipse SUMO netedit Version 1.14.1
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <!-- VTypes -->
+    <vType id="EMS_VEHICLE" speedFactor="normc(1.50,0.00)" vClass="emergency" impatience="1.00" guiShape="emergency" lcKeepRight="1.0" lcSublane="0.0" lcPushy="1.0" lcImpatience="10" lcOvertakeRight="1.0" jmDriveAfterYellowTime="1" jmDriveAfterRedTime="1" jmDriveRedSpeed="13.89" jmIgnoreKeepClearTime="0" jmIgnoreFoeSpeed="20.0" jmIgnoreFoeProb="1.0">
+        <param key="has.bluelight.device" value="true"/>
+    </vType>
+    <!-- Vehicles, persons and containers (sorted by depart) -->
+    <flow id="f_0" begin="0.00" departLane="random" from="E1" to="E9" end="100.00" probability="0.08"/>
+    <flow id="f_1" begin="0.00" departLane="random" from="E1" to="E7" via="E2" end="100.00" probability="0.08"/>
+    <flow id="f_10" begin="0.00" departLane="random" from="E10" to="E7" via="E2" end="100.00" probability="0.08"/>
+    <flow id="f_11" begin="0.00" departLane="random" from="E10" to="E5" via="E2 E3" end="100.00" probability="0.08"/>
+    <flow id="f_12" begin="0.00" departLane="random" from="-E5" to="E6" end="100.00" probability="0.08"/>
+    <flow id="f_13" begin="0.00" departLane="random" from="-E8" to="E7" end="100.00" probability="0.08"/>
+    <flow id="f_14" begin="0.00" departLane="random" from="-E8" to="E5" via="E3" end="100.00" probability="0.08"/>
+    <flow id="f_15" begin="0.00" departLane="random" from="-E8" to="E9" via="-E2" end="100.00" probability="0.08"/>
+    <flow id="f_16" begin="0.00" departLane="random" from="-E6" to="E7" via="-E3" end="100.00" probability="0.08"/>
+    <flow id="f_17" begin="0.00" departLane="random" from="-E6" to="E9" via="-E3 -E2" end="100.00" probability="0.08"/>
+    <flow id="f_18" begin="0.00" departLane="random" from="-E6" to="E4" end="100.00" probability="0.08"/>
+    <flow id="f_19" begin="0.00" departLane="random" from="-E7" to="E6" via="E3" end="100.00" probability="0.08"/>
+    <flow id="f_2" begin="0.00" departLane="random" from="E1" to="E5" via="E2 E3" end="100.00" probability="0.08"/>
+    <flow id="f_20" begin="0.00" departLane="random" from="-E7" to="E8" end="100.00" probability="0.08"/>
+    <flow id="f_21" begin="0.00" departLane="random" from="-E4" to="E6" end="100.00" probability="0.08"/>
+    <flow id="f_22" begin="0.00" departLane="random" from="-E4" to="E5" end="100.00" probability="0.08"/>
+    <flow id="f_23" begin="0.00" departLane="random" from="-E4" to="E7" via="-E3" end="100.00" probability="0.08"/>
+    <flow id="f_24" begin="0.00" departLane="random" from="-E7" to="E6" via="E3" end="100.00" probability="0.08"/>
+    <flow id="f_25" begin="0.00" departLane="random" from="-E7" to="E4" via="E3" end="100.00" probability="0.08"/>
+    <flow id="f_26" begin="0.00" departLane="random" from="-E8" to="E4" via="E3" end="100.00" probability="0.08"/>
+    <flow id="f_27" begin="0.00" departLane="random" from="-E8" to="E5" via="E3" end="100.00" probability="0.08"/>
+    <flow id="f_28" begin="0.00" departLane="random" from="-E6" to="E5" end="100.00" probability="0.08"/>
+    <flow id="f_29" begin="0.00" departLane="random" from="-E6" to="E4" end="100.00" probability="0.08"/>
+    <flow id="f_3" begin="0.00" departLane="random" from="E1" to="-E10" end="100.00" probability="0.08"/>
+    <flow id="f_4" begin="0.00" departLane="random" from="E1" to="E8" via="E2" end="100.00" probability="0.08"/>
+    <flow id="f_5" begin="0.00" departLane="random" from="-E9" to="-E10" end="100.00" probability="0.08"/>
+    <flow id="f_6" begin="0.00" departLane="random" from="-E9" to="-E1" end="100.00" probability="0.08"/>
+    <flow id="f_7" begin="0.00" departLane="random" from="-E9" to="E8" via="E2" end="100.00" probability="0.08"/>
+    <flow id="f_8" begin="0.00" departLane="random" from="E10" to="-E1" end="100.00" probability="0.08"/>
+    <flow id="f_9" begin="0.00" departLane="random" from="E10" to="E9" end="100.00" probability="0.08"/>
+    <trip id="t_0" type="EMS_VEHICLE" depart="55.00" departLane="1" from="E1" to="E4" via="E2 E3"/>
+</routes>

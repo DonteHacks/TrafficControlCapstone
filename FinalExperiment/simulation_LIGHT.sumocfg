@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
+
+	<input>
+		<net-file value="verticalNetwork.net.xml"/>
+		<route-files value = "routes_LIGHT.rou.xml"/>
+		<additional-files value="additionals.add.xml"/>
+	</input>
+
+	<time>
+		<begin value="0"/>
+		<end value="320"/>
+	</time>
+
+	<processing>
+		<lateral-resolution value="0.5"/>
+		<random value="true"/>		<!-- Set to false for repeated simulations -->
+	</processing>
+
+</configuration>
