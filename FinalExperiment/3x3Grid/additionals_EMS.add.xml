@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<additional>
+
+	<edgeData id="EMSData" file=".\data\edgeData_EMS" vTypes="EMS_Vehicle" excludeEmpty="true"/>
+	<edgeData id="OtherData" file=".\data\edgeData_EMS" vTypes="DEFAULT_VEHTYPE" excludeEmpty="true"/>
+	<edgeData id="AllData" file =".\data\edgeData_EMS" vTypes="DEFAULT_VEHTYPE EMS_Vehicle" excludeEmpty="true"/>
+
+</additional>
